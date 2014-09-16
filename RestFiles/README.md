@@ -22,7 +22,22 @@ CouchDB integration work is not complete. There are currently issues de-serializ
 
 	JsonSerializer.DeserializeFromString<JsonObject>(doc);
 
-Consider using MyCouch to deserialise the graph.
+Consider using MyCouch to deserialise the graph. See: http://danielwertheim.se/2013/05/26/get-up-and-running-with-couchdb-and-c-using-mycouch-on-windows/
+
+  var response = db.Views.RunQuery<Album[]>(query);
+  
+See also the wiki: https://github.com/danielwertheim/mycouch/wiki/documentation#documents-vs-entities
+
+  var query = new QueryViewRequest("_all_docs");
+  var response = await client.Views.QueryAsync<dynamic>(query);
+    
+Another example using an Entity:
+
+  var query = new QueryViewRequest("artists", "albums").Configure(query => query
+      .Limit(5)
+      .Reduce(false));
+
+    ViewQueryResponse<Album[]> result = await client.Views.QueryAsync<Album[]>(query);
 
 #The REST Files
 
