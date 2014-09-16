@@ -1,0 +1,9 @@
+/Users/chrisk/source/KiwiRest/RestFiles.ServiceModel/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/chrisk/source/KiwiRest/RestFiles.ServiceModel/bin/Debug/RestFiles.ServiceModel.dll.mdb
+/Users/chrisk/source/KiwiRest/RestFiles.ServiceModel/bin/Debug/RestFiles.ServiceModel.dll
+/Users/chrisk/source/KiwiRest/RestFiles.ServiceModel/obj/Debug/RestFiles.ServiceModel.dll
+/Users/chrisk/source/KiwiRest/RestFiles.ServiceModel/obj/Debug/RestFiles.ServiceModel.dll.mdb
+/Users/chrisk/source/KiwiRest/RestFiles.ServiceModel/bin/Debug/ServiceStack.Interfaces.dll
+/Users/chrisk/source/KiwiRest/RestFiles.ServiceModel/bin/Debug/SourceAFIS.Mono.dll
+/Users/chrisk/source/KiwiRest/RestFiles.ServiceModel/bin/Debug/SourceAFIS.Mono.dll.mdb
+/Users/chrisk/source/KiwiRest/RestFiles.ServiceModel/bin/Debug/SourceAFIS.Mono.xml

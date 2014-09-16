@@ -1,0 +1,43 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="RestFiles/README.md">
+    <Files>
+      <File FileName="RestFiles.ServiceInterface/FilesService.cs" Line="14" Column="14" />
+      <File FileName="RestFiles.ServiceInterface/PersonList.cs" Line="34" Column="34" />
+      <File FileName="RestFiles/Global.asax.cs" Line="28" Column="28" />
+      <File FileName="RestFiles.ServiceInterface/AllDocs.cs" Line="3" Column="3" />
+      <File FileName="RestFiles.ServiceInterface/MyPerson.cs" Line="1" Column="1" />
+      <File FileName="RestFiles.ServiceInterface/SimpleFingerprint.cs" Line="1" Column="1" />
+      <File FileName="RestFiles/xsp.exe.config" Line="1" Column="1" />
+      <File FileName="RestFiles/README.md" Line="49" Column="49" />
+      <File FileName="RestFiles.ServiceInterface/AppConfig.cs" Line="1" Column="1" />
+      <File FileName="../ServiceStack.Examples/src/RedisStackOverflow/RedisStackOverflow/Global.asax.cs" Line="1" Column="1" />
+      <File FileName="../ServiceStack.Examples/src/RedisStackOverflow/RedisStackOverflow.ServiceInterface/IRepository.cs" Line="1" Column="1" />
+      <File FileName="../ServiceStack.Examples/src/RedisStackOverflow/RedisStackOverflow.ServiceInterface/QuestionsService.cs" Line="1" Column="1" />
+      <File FileName="../../tools/sourceafis-code-17/SourceAFIS/SourceAFIS.Mono.csproj" Line="1" Column="1" />
+      <File FileName="../../tools/sourceafis-code-17/SourceAFIS/Simple/AfisEngine.cs" Line="1" Column="1" />
+      <File FileName="RestFiles.ServiceInterface/SourceAfisIdentify.cs" Line="31" Column="31" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/chrisk/source/KiwiRest/RestFiles.ServiceInterface/PersonList.cs" line="70" column="1" />
+      <Breakpoint file="/Users/chrisk/source/KiwiRest/RestFiles.ServiceInterface/PersonList.cs" line="39" column="1" />
+      <Breakpoint file="/Users/chrisk/source/KiwiRest/RestFiles/Global.asax.cs" line="42" column="1" />
+      <Breakpoint file="/Users/chrisk/source/KiwiRest/RestFiles/Global.asax.cs" line="44" column="4" />
+      <Breakpoint file="/Users/chrisk/source/KiwiRest/RestFiles.ServiceInterface/FilesService.cs" line="132" column="1" />
+      <Breakpoint file="/Users/chrisk/source/KiwiRest/RestFiles.ServiceInterface/FilesService.cs" line="98" column="29" />
+      <Breakpoint file="/Users/chrisk/tools/sourceafis-code-17/SourceAFIS/Simple/AfisEngine.cs" line="306" column="1" />
+      <Breakpoint file="/Users/chrisk/tools/sourceafis-code-17/SourceAFIS/Simple/AfisEngine.cs" line="290" column="1" />
+      <Breakpoint file="/Users/chrisk/tools/sourceafis-code-17/SourceAFIS/Simple/AfisEngine.cs" line="327" column="1" />
+      <Breakpoint file="/Users/chrisk/tools/sourceafis-code-17/SourceAFIS/Simple/AfisEngine.cs" line="329" column="1" />
+      <Breakpoint file="/Users/chrisk/tools/sourceafis-code-17/SourceAFIS/Simple/AfisEngine.cs" line="334" column="1" />
+      <Breakpoint file="/Users/chrisk/source/KiwiRest/RestFiles/Global.asax.cs" line="95" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>../../tools/sourceafis-code-4f1264ab5fbb1cec51156eb5ef84d20ef5178a9b/SourceAFIS/SourceAFIS.csproj</String>
+    <String>../../tools/sourceafis-code-18344c2c44ae4b4c6ec57490cdbb3e7c64532443/SourceAFIS/SourceAFIS.Mono.csproj</String>
+  </DisabledProjects>
+</Properties>
