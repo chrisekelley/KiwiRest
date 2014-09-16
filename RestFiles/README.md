@@ -1,5 +1,7 @@
 # Kiwi REST
 
+SourceAFIS fingerprint .NET server using ServiceStack REST example
+
 This project is based on the REST ServiceStack Example project. More information on that follows.
 
 ## How it works
