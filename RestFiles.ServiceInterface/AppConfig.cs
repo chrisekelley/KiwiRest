@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using System.IO;
-using ServiceStack;
-using ServiceStack.Configuration;
+using NServiceKit;
+using NServiceKit.Configuration;
+using NServiceKit.Common;
+using NServiceKit.Common.Utils;
 
 namespace RestFiles.ServiceInterface
 {
@@ -13,7 +15,8 @@ namespace RestFiles.ServiceInterface
 			this.ExcludeDirectories = new List<string>();
 		}
 
-		public AppConfig(IAppSettings resources)
+		//public AppConfig(IAppSettings resources)
+		public AppConfig(IResourceManager resources)
 		{
 			this.RootDirectory = resources.GetString("RootDirectory").MapHostAbsolutePath()
 				.Replace('\\', Path.DirectorySeparatorChar);
@@ -27,5 +30,26 @@ namespace RestFiles.ServiceInterface
 		public IList<string> TextFileExtensions { get; set; }
 
 		public IList<string> ExcludeDirectories { get; set; }
+
+		public interface IAppSettings
+		{
+			Dictionary<string, string> GetAll();
+
+			List<string> GetAllKeys();
+
+			bool Exists(string key);
+
+			void Set<T>(string key, T value);
+
+			string GetString(string name);
+
+			IList<string> GetList(string key);
+
+			IDictionary<string, string> GetDictionary(string key);
+
+			T Get<T>(string name);
+
+			T Get<T>(string name, T defaultValue);
+		}
 	}
 }

@@ -12,6 +12,7 @@ namespace RestFiles.ServiceInterface
 		public string _id { get; set; }
 		public string _rev { get; set; }
 		public string doctype { get; set; }
+		public SimpleFingerprint simpleFingerprint { get; set; }
 		public List<SimpleFingerprint> SimpleFingerprints { get; set; }
 
 		public MyPerson ()

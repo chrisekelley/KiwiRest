@@ -1,6 +1,12 @@
-using Funq;
+//using Funq;
 using RestFiles.ServiceInterface;
-using ServiceStack;
+using NServiceKit;
+using NServiceKit.Text;
+using NServiceKit.WebHost.Endpoints;
+using NServiceKit.ServiceInterface.Cors;
+using NServiceKit.ServiceHost;
+using NServiceKit.WebHost.Endpoints.Ext;
+
 
 namespace RestFiles.Tests
 {

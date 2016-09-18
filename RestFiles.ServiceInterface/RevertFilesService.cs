@@ -1,7 +1,10 @@
 using System.IO;
 using System.Linq;
 using RestFiles.ServiceModel;
-using ServiceStack;
+using NServiceKit;
+using NServiceKit.ServiceInterface;
+using NServiceKit.Common.Utils;
+using NServiceKit.Common;
 
 namespace RestFiles.ServiceInterface
 {

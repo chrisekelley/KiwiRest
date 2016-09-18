@@ -60,8 +60,23 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="ServiceStack.Interfaces">
-      <HintPath>..\packages\ServiceStack.Interfaces.4.0.31\lib\portable-wp80+sl5+net40+win8+monotouch+monoandroid\ServiceStack.Interfaces.dll</HintPath>
+    <Reference Include="NServiceKit.Text">
+      <HintPath>..\packages\NServiceKit.Text.1.0.10\lib\net35\NServiceKit.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceKit">
+      <HintPath>..\packages\NServiceKit.1.0.43\lib\net35\NServiceKit.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceKit.ServiceInterface">
+      <HintPath>..\packages\NServiceKit.1.0.43\lib\net35\NServiceKit.ServiceInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceKit.Common">
+      <HintPath>..\packages\NServiceKit.Common.1.0.43\lib\net35\NServiceKit.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceKit.Interfaces">
+      <HintPath>..\packages\NServiceKit.Common.1.0.43\lib\net35\NServiceKit.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="NServiceKit.FluentValidation.Mvc3">
+      <HintPath>..\packages\NServiceKit.Mvc.1.0.43\lib\net40\NServiceKit.FluentValidation.Mvc3.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

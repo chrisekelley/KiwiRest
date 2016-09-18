@@ -2,7 +2,9 @@ using System;
 using System.IO;
 using NUnit.Framework;
 using RestFiles.ServiceModel;
-using ServiceStack;
+using NServiceKit;
+using NServiceKit.Service;
+using NServiceKit.ServiceClient.Web;
 
 /* For syntax highlighting and better readability of this file, view it on GitHub:
  * https://github.com/ServiceStack/ServiceStack.Examples/blob/master/src/RestFiles/RestFiles.Tests/SyncRestClientTests.cs

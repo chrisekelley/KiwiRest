@@ -1,4 +1,12 @@
-using ServiceStack;
+using NServiceKit;
+using NServiceKit.ServiceInterface.ServiceModel;
+using NServiceKit.Mvc;
+
+//using NServiceKit.Common;
+//using NServiceKit.ServiceClient.Web;
+using NServiceKit.ServiceHost;
+//using NServiceKit.ServiceInterface;
+//using NServiceKit.WebHost.Endpoints;
 
 namespace RestFiles.ServiceModel
 {

@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyCouch.Cloudant.Net40</name>
+    </assembly>
+    <members>
+        <member name="T:MyCouch.Cloudant.ISearches">
+            <summary>
+            Used to access Search Indexes at Cloudant.
+            </summary>
+        </member>
+        <member name="M:MyCouch.Cloudant.ISearches.SearchAsync(MyCouch.Cloudant.Requests.SearchIndexRequest)">
+            <summary>
+            Lets you perform a search using Cloudants Lucene powered
+            Search API by using a reusable <see cref="T:MyCouch.Cloudant.Requests.SearchIndexRequest"/>.
+            Any returned IncludedDoc will be treated as JSON.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.ISearches.SearchAsync``1(MyCouch.Cloudant.Requests.SearchIndexRequest)">
+            <summary>
+            Lets you perform a search using Cloudants Lucene powered
+            Search API by using a reusable <see cref="T:MyCouch.Cloudant.Requests.SearchIndexRequest"/>.
+            Any returned IncludedDoc will be treated as <typeparamref name="TIncludedDoc"/>.
+            </summary>
+            <typeparam name="TIncludedDoc"></typeparam>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="P:MyCouch.Cloudant.IMyCouchCloudantClient.Searches">
+            <summary>
+            Used to access Search Indexes at Cloudant.
+            </summary>
+        </member>
+        <member name="T:MyCouch.Cloudant.IMyCouchCloudantServerClient">
+            <summary>
+            Connects to a server instance rather than a DB instance
+            as <see cref="T:MyCouch.Cloudant.IMyCouchCloudantClient"/> or <see cref="T:MyCouch.IMyCouchStore"/>
+            does.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.IMyCouchCloudantServerClient.Security">
+            <summary>
+            Used to access Security features with Cloudant.
+            </summary>
+        </member>
+        <member name="T:MyCouch.Cloudant.ISearchParameters">
+            <summary>
+            The different common search parameters that can be specified
+            when performing a query against a Search-index.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.IndexIdentity">
+            <summary>
+            Identitfies the Search index that this request will be
+            performed against.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.Expression">
+            <summary>
+            The Lucene expression that will be used to query the index.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.Stale">
+            <summary>
+            Allow the results from a stale search index to be used.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.Bookmark">
+            <summary>
+            A bookmark that was received from a previous search. This
+            allows you to page through the results. If there are no more
+            results after the bookmark, you will get a response with an
+            empty rows array and the same bookmark. That way you can
+            determine that you have reached the end of the result list.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.Sort">
+            <summary>
+            Sort expressions used to sort the output.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.IncludeDocs">
+            <summary>
+            Include the full content of the documents in the return.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.Limit">
+            <summary>
+            Limit the number of the returned documents to the specified number.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.Ranges">
+            <summary>
+            Defines ranges for faceted numeric search fields.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.Counts">
+            <summary>
+            List of field names for which counts should be produced.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.GroupField">
+            <summary>
+            Field by which to group search matches.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.GroupLimit">
+            <summary>
+            Maximum group count. This field can only be used if group_field is specified.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.GroupSort">
+            <summary>
+            This field defines the order of the groups in a search using group_field.
+            The default sort order is relevance.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.ISearchParameters.DrillDown">
+            <summary>
+            Defines a pair of field name and value so that search only matches
+            documents that that have the given value in the field name.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.IndexIdentity">
+            <summary>
+            Identitfies the Search index that this request will be
+            performed against.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.Expression">
+            <summary>
+            The Lucene expression that will be used to query the index.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.Stale">
+            <summary>
+            Allow the results from a stale search index to be used.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.Bookmark">
+            <summary>
+            A bookmark that was received from a previous search. This
+            allows you to page through the results. If there are no more
+            results after the bookmark, you will get a response with an
+            empty rows array and the same bookmark. That way you can
+            determine that you have reached the end of the result list.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.Sort">
+            <summary>
+            Sort expressions used to sort the output.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.IncludeDocs">
+            <summary>
+            Include the full content of the documents in the return.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.Limit">
+            <summary>
+            Limit the number of the returned documents to the specified number.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.Ranges">
+            <summary>
+            Defines ranges for faceted numeric search fields.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.Counts">
+            <summary>
+            List of field names for which counts should be produced.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.GroupField">
+            <summary>
+            Field by which to group search matches.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.GroupLimit">
+            <summary>
+            Maximum group count. This field can only be used if group_field is specified.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.GroupSort">
+            <summary>
+            Sort expressions that defines the order of the groups in a search using group_field.
+            The default sort order is relevance.
+            </summary>
+        </member>
+        <member name="P:MyCouch.Cloudant.Requests.SearchIndexRequest.DrillDown">
+            <summary>
+            Defines a pair of field name and value so that search only matches
+            documents that that have the given value in the field name.
+            </summary>
+        </member>
+        <member name="T:MyCouch.Cloudant.SearchIndexIdentity">
+            <summary>
+            Used to identify a certain search index in a design document.
+            </summary>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.Expression(System.String)">
+            <summary>
+            Lucene expression that will be used to query the index.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.Stale(MyCouch.Stale)">
+            <summary>
+            Allow the results from a stale search index to be used.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.Bookmark(System.String)">
+            <summary>
+            A bookmark that was received from a previous search. This
+            allows you to page through the results. If there are no more
+            results after the bookmark, you will get a response with an
+            empty rows array and the same bookmark. That way you can
+            determine that you have reached the end of the result list.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.Sort(System.String[])">
+            <summary>
+            Sort expressions used to sort the output.
+            </summary>
+            <param name="sortExpressions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.IncludeDocs(System.Boolean)">
+            <summary>
+            Include the full content of the documents in the return;
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.Limit(System.Int32)">
+            <summary>
+            Limit the number of the returned documents to the specified number.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.Ranges(System.Object)">
+            <summary>
+            Expression to define ranges for faceted numeric search fields
+            </summary>
+            <param name="ranges"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.Counts(System.String[])">
+            <summary>
+            List of field names for which counts should be produced.
+            </summary>
+            <param name="counts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.GroupField(System.String)">
+            <summary>
+            Field by which to group search matches.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.GroupLimit(System.Int32)">
+            <summary>
+            Maximum group count. This field can only be used if group_field is specified.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.GroupSort(System.String[])">
+            <summary>
+            This field defines the order of the groups in a search using group_field.
+            The default sort order is relevance.
+            </summary>
+            <param name="sortExpressions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MyCouch.Cloudant.SearchParametersConfigurator.DrillDown(System.String,System.String)">
+            <summary>
+            Defines a pair of field name and value so that search only matches
+            documents that that have the given value in the field name.
+            </summary>
+        </member>
+    </members>
+</doc>

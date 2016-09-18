@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using SourceAFIS.Simple;
 using System.Net;
-using ServiceStack.Text;
+using NServiceKit.Text;
 using MyCouch.Requests;
 using MyCouch.Responses;
 using System.Threading.Tasks;

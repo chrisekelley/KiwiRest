@@ -4,8 +4,10 @@ using System.Net;
 using RestFiles.ServiceInterface.Support;
 using RestFiles.ServiceModel;
 using RestFiles.ServiceModel.Types;
-using ServiceStack;
-using ServiceStack.Text;
+using NServiceKit;
+using NServiceKit.Text;
+using NServiceKit.ServiceInterface;
+using NServiceKit.Common.Web;
 using File = System.IO.File;
 using SourceAFIS.Simple;
 using System.Drawing;
@@ -14,6 +16,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using NServiceKit.ServiceHost;
 
 namespace RestFiles.ServiceInterface
 {
@@ -26,7 +29,8 @@ namespace RestFiles.ServiceInterface
         /// Gets or sets the AppConfig. The built-in IoC used with ServiceStack autowires this property.
         /// </summary>
         public AppConfig Config { get; set; }
-		public List<MyPerson> Database { get; set; }
+		//public static List<MyPerson> Database { get; set; }
+		public FingerprintDatabase FingerprintDatabase { get; set; }
 
 		static AfisEngine Afis = new AfisEngine();
 
@@ -49,7 +53,9 @@ namespace RestFiles.ServiceInterface
 //		[AddHeader(ContentType = "text/json")]
 		public object Post (Files request)
 		{
-//			var response = new MyPerson { };
+			//var container = ServiceStackHost.Instance.Container;
+
+			//			var response = new MyPerson { };
 			var response = "";
 			var message = "";
 			var uuid = "";
@@ -94,19 +100,29 @@ namespace RestFiles.ServiceInterface
 				// Look up the probe using Threshold = 10
 				Afis.Threshold = 10;
 				DateTime date2 = DateTime.Now;
-				Console.WriteLine ("Identifying {0} in Database of {1} persons...", probe.Name, Database.Count + " at " + date2);
-				MyPerson match = Afis.Identify (probe, Database).FirstOrDefault () as MyPerson;
+				var list = FingerprintDatabase.people;
+				//Console.WriteLine("Identifying {0} in Database of {1} persons...", probe.Name, list.Count + " at " + date2);
+				Console.WriteLine ("{0} : Identifying {1} in Database of {2} persons...", date2, probe.Name, list.Count);
+
+				MyPerson match = Afis.Identify (probe, list).FirstOrDefault () as MyPerson;
+
 				DateTime date3 = DateTime.Now;
 				var diffInSeconds = (date3 - date2).TotalSeconds;
 				Console.WriteLine("Enroll time:  " + diffInSeconds + " seconds");
 				diffInSeconds = (date2 - date1).TotalSeconds;
 				Console.WriteLine("Total enroll + match time:  " + diffInSeconds + " seconds");
 
+				Response jsonResponse = new Response();
+
 				// Null result means that there is no candidate with similarity score above threshold
 				if (match == null) {
 					message = "NoMatch";
+					jsonResponse.StatusCode = 3;
+					jsonResponse.Error = message;
+					jsonResponse.UID = g.ToString();
 					Console.WriteLine (message);
-					Database.Add (probe);
+					//Database.Add (probe);
+					FingerprintDatabase.AddData(probe);
 					String url = "http://localhost:5984/prints/" + g.ToString ();
 //					String data = "{_id: " + "\"" + g.ToString ()  + "\"" + ", fileName:" + "\""  + uploadedFile.FileName + "\""  + "}";
 					var person = new MyPerson ();
@@ -128,16 +144,17 @@ namespace RestFiles.ServiceInterface
 
 						SimpleFingerprint fprint = new SimpleFingerprint ();
 						fprint.Base64Template = base64String;
-						fprint.Filename = fprint.Filename;
+						fprint.Filename = uploadedFile.FileName;
 						DateTime dateUploaded = DateTime.Now;
 						string isoJson = JsonConvert.SerializeObject(dateUploaded, Formatting.None, new IsoDateTimeConverter() { DateTimeFormat = "yyyy-MM-dd hh:mm:ss" });
 						fprint.DateUploaded = isoJson;
-						fingerprints.Add (fprint);
+						//fingerprints.Add (fprint);
+						person.simpleFingerprint = fprint;
 					}
 
 					person.SimpleFingerprints = fingerprints;
 
-					var json = ServiceStack.Text.JsonSerializer.SerializeToString(person);
+					var json = NServiceKit.Text.JsonSerializer.SerializeToString(person);
 					Console.WriteLine (json);
 					WebClient client = new WebClient ();
 					try {
@@ -154,7 +171,8 @@ namespace RestFiles.ServiceInterface
 //					};
 
 //					response = probe;
-					response = message;
+					string jsonString = JsonConvert.SerializeObject(jsonResponse);
+					response = jsonString;
 				} else {
 					// Print out any non-null result
 					Console.WriteLine ("Probe {0} matches registered person {1}", probe.Name, match.Name);

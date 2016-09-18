@@ -114,20 +114,20 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Interfaces">
-      <HintPath>..\packages\ServiceStack.Interfaces.4.0.31\lib\portable-wp80+sl5+net40+win8+monotouch+monoandroid\ServiceStack.Interfaces.dll</HintPath>
+    <Reference Include="NServiceKit.Text">
+      <HintPath>..\packages\NServiceKit.Text.1.0.10\lib\net35\NServiceKit.Text.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Text">
-      <HintPath>..\packages\ServiceStack.Text.4.0.31\lib\net40\ServiceStack.Text.dll</HintPath>
+    <Reference Include="NServiceKit">
+      <HintPath>..\packages\NServiceKit.1.0.43\lib\net35\NServiceKit.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Common">
-      <HintPath>..\packages\ServiceStack.Common.4.0.31\lib\net40\ServiceStack.Common.dll</HintPath>
+    <Reference Include="NServiceKit.ServiceInterface">
+      <HintPath>..\packages\NServiceKit.1.0.43\lib\net35\NServiceKit.ServiceInterface.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack.Client">
-      <HintPath>..\packages\ServiceStack.Client.4.0.31\lib\net40\ServiceStack.Client.dll</HintPath>
+    <Reference Include="NServiceKit.Common">
+      <HintPath>..\packages\NServiceKit.Common.1.0.43\lib\net35\NServiceKit.Common.dll</HintPath>
     </Reference>
-    <Reference Include="ServiceStack">
-      <HintPath>..\packages\ServiceStack.4.0.31\lib\net40\ServiceStack.dll</HintPath>
+    <Reference Include="NServiceKit.Interfaces">
+      <HintPath>..\packages\NServiceKit.Common.1.0.43\lib\net35\NServiceKit.Interfaces.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +142,8 @@
     <Compile Include="PersonList.cs" />
     <Compile Include="SimpleFingerprint.cs" />
     <Compile Include="AllDocs.cs" />
+    <Compile Include="FingerprintDatabase.cs" />
+    <Compile Include="Response.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RestFiles.ServiceModel\RestFiles.ServiceModel.csproj">

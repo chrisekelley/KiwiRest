@@ -1,1 +1,0 @@
-/Users/chrisk/source/KiwiRest/RestFiles.Tests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs

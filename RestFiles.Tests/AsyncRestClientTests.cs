@@ -2,9 +2,12 @@ using System;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
+using NServiceKit.Service;
+using NServiceKit.ServiceClient.Web;
 using NUnit.Framework;
 using RestFiles.ServiceModel;
-using ServiceStack;
+using NServiceKit;
+using NServiceKit.Common.Web;
 
 /* For syntax highlighting and better readability of this file, view it on GitHub:
  * https://github.com/ServiceStack/ServiceStack.Examples/blob/master/src/RestFiles/RestFiles.Tests/AsyncRestClientTests.cs

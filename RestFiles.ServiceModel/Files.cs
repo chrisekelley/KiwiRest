@@ -1,5 +1,8 @@
 using RestFiles.ServiceModel.Types;
-using ServiceStack;
+using NServiceKit;
+using NServiceKit.ServiceInterface.ServiceModel;
+using NServiceKit.ServiceHost;
+
 
 namespace RestFiles.ServiceModel
 {
@@ -15,7 +18,7 @@ namespace RestFiles.ServiceModel
     {		
         public string Path { get; set; }		
         public string TextContents { get; set; }		
-        public bool ForDownload { get; set; }
+        public bool ForDownload { get; set; }			
     }
 
     /// <summary>
