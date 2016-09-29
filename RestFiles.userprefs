@@ -1,19 +1,21 @@
 ﻿<Properties StartupItem="RestFiles/RestFiles.csproj" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench ActiveDocument="RestFiles.ServiceInterface/FilesService.cs">
     <Files>
-      <File FileName="RestFiles/Global.asax.cs" Line="160" Column="1" />
+      <File FileName="RestFiles/Global.asax.cs" Line="86" Column="1" />
       <File FileName="RestFiles.ServiceInterface/AppConfig.cs" Line="17" Column="3" />
-      <File FileName="RestFiles.ServiceInterface/MyPerson.cs" Line="2" Column="1" />
+      <File FileName="RestFiles.ServiceInterface/MyPerson.cs" Line="9" Column="17" />
       <File FileName="RestFiles.ServiceInterface/SimpleFingerprint.cs" Line="6" Column="15" />
       <File FileName="RestFiles/Web.config" Line="6" Column="61" />
-      <File FileName="RestFiles.ServiceInterface/PersonList.cs" Line="6" Column="18" />
+      <File FileName="RestFiles.ServiceInterface/PersonList.cs" Line="27" Column="23" />
       <File FileName="RestFiles.ServiceModel/RevertFiles.cs" Line="5" Column="3" />
       <File FileName="RestFiles.ServiceInterface/RevertFilesService.cs" Line="55" Column="37" />
       <File FileName="RestFiles.Tests/SyncRestClientTests.cs" Line="60" Column="3" />
       <File FileName="RestFiles.Tests/AsyncRestClientTests.cs" Line="101" Column="60" />
       <File FileName="RestFiles.Tests/Support/RestFilesHttpListener.cs" Line="11" Column="26" />
-      <File FileName="RestFiles.ServiceInterface/FilesService.cs" Line="84" Column="24" />
+      <File FileName="RestFiles.ServiceInterface/FilesService.cs" Line="126" Column="71" />
       <File FileName="RestFiles.ServiceInterface/MyFingerprint.cs" Line="8" Column="39" />
+      <File FileName="RestFiles.ServiceInterface/Response.cs" Line="1" Column="1" />
+      <File FileName="RestFiles.ServiceInterface/SourceAfisIdentify.cs" Line="43" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -32,7 +34,7 @@
       <Breakpoint file="/Users/chrisk/tools/sourceafis-code-17/SourceAFIS/Simple/AfisEngine.cs" line="334" column="1" />
       <Breakpoint file="/Users/chrisk/source/KiwiRest/RestFiles/Global.asax.cs" line="95" column="1" />
       <Breakpoint file="/Users/ckelley/source/KiwiRest/KiwiRest/RestFiles/Global.asax.cs" line="167" column="1" />
-      <Breakpoint file="/Users/ckelley/source/KiwiRest/KiwiRest/RestFiles.ServiceInterface/FilesService.cs" line="214" column="1" />
+      <Breakpoint file="/Users/ckelley/source/KiwiRest/KiwiRest/RestFiles.ServiceInterface/FilesService.cs" line="196" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.RestFiles PreferredExecutionTarget="MonoDevelop.Default" />

@@ -132,7 +132,7 @@ namespace RestFiles.ServiceInterface
 					if (match == null)
 					{
 						message = "NoMatch";
-						jsonResponse.StatusCode = 3;
+						jsonResponse.StatusCode = 4;
 						jsonResponse.Error = message;
 						jsonResponse.UID = g.ToString();
 						Console.WriteLine(message);
