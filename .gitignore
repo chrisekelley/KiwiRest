@@ -2,3 +2,5 @@
 .DS_Store
 
 *.png
+
+RestFiles/App_Data/files

@@ -12,7 +12,7 @@
       <File FileName="RestFiles.Tests/SyncRestClientTests.cs" Line="60" Column="3" />
       <File FileName="RestFiles.Tests/AsyncRestClientTests.cs" Line="101" Column="60" />
       <File FileName="RestFiles.Tests/Support/RestFilesHttpListener.cs" Line="11" Column="26" />
-      <File FileName="RestFiles.ServiceInterface/FilesService.cs" Line="103" Column="19" />
+      <File FileName="RestFiles.ServiceInterface/FilesService.cs" Line="84" Column="24" />
       <File FileName="RestFiles.ServiceInterface/MyFingerprint.cs" Line="8" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>

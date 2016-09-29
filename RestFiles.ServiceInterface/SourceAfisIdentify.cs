@@ -49,6 +49,7 @@ namespace RestFiles.ServiceInterface
 			// Initialize empty person object and set its properties
 			MyPerson person = new MyPerson();
 			person.Name = name;
+			person.Uuid = name;
 			// Add fingerprint to the person
 			person.Fingerprints.Add(fp);
 

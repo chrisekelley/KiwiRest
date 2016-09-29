@@ -83,7 +83,7 @@ namespace RestFiles
 			//string sourceDirectory = @"/Users/chrisk/source/KiwiRest/RestFiles/App_Data/files";
 			//AfisEngine Afis = new AfisEngine();
 			DateTime date1 = DateTime.Now;
-			Console.WriteLine("Starting PersonList:  " + date1);
+			Console.WriteLine("Starting FingerprintDatabase:  " + date1);
 //			WebClient client = new WebClient ();
 			//string uri = "http://localhost:5984/prints/_all_docs&include_docs=true";
 			//			string data = client.DownloadString (uri);
@@ -158,7 +158,7 @@ namespace RestFiles
 					person.Uuid = jsonObj["Uuid"];
 					//database.Add(person);
 					FingerprintDatabase.AddData(person);
-					Console.WriteLine("Work?");
+					Console.WriteLine("Added person to FingerprintDatabase.");
 				}
 				//container.Register(database);
 

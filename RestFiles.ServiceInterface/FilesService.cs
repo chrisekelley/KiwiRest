@@ -100,7 +100,7 @@ namespace RestFiles.ServiceInterface
 			{
 				foreach (var uploadedFile in base.Request.Files)
 				{
-					var newFilePath = Path.Combine(targetDir.FullName, uploadedFile.FileName);
+					var newFilePath = Path.Combine(targetDir.FullName, uploadedFile.FileName) + ".png";
 					//					if (uploadedFile.StartsWith("verify") {
 					//					}
 					uploadedFile.SaveTo(newFilePath);
@@ -188,12 +188,12 @@ namespace RestFiles.ServiceInterface
 					}
 					else {
 						// Print out any non-null result
-						Console.WriteLine("Probe {0} matches registered person {1}", probe.Name, match.Name);
+						Console.WriteLine("Probe {0} matches registered person {1}", probe.Uuid, match.Uuid);
 
 						// Compute similarity score
 						DateTime date4 = DateTime.Now;
 						float score = Afis.Verify(probe, match);
-						Console.WriteLine("Similarity score between {0} and {1} = {2:F3}", probe.Name, match.Name, score);
+						Console.WriteLine("Similarity score between {0} and {1} = {2:F3}", probe.Uuid, match.Uuid, score);
 						DateTime date5 = DateTime.Now;
 						diffInSeconds = (date5 - date4).TotalSeconds;
 						Console.WriteLine("Verify time:  " + diffInSeconds + " seconds");
